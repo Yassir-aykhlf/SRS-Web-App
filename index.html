@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SRS Problem Tracker</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header class="header">
+            <h1>Spaced Repetition Tracker</h1>
+            <p>Master technical problems with a systematic approach.</p>
+        </header>
+
+        <main>
+            <section class="section section--add">
+                <h2>Add a New Problem</h2>
+                <form class="form-add-problem">
+                    <div class="form__group">
+                        <label for="problem-name">Problem Name/ID</label>
+                        <input
+                            type="text"
+                            id="problem-name"
+                            placeholder="e.g, Two Sum"
+                            required
+                        />
+                    </div>
+                    <div class="form__group">
+                        <label for="problem-url">URL</label>
+                        <input
+                            type="url"
+                            id="problem-url"
+                            placeholder="https://leetcode.com/problems/two-sum/"
+                            required
+                        />
+                    </div>
+                    <button class="btn" type="submit">Add Problem</button>
+                </form>
+            </section>
+
+            <section class="section section--problems">
+                <div class="tabs-container">
+                    <button
+                        class="tabs__tab tabs__tab--1 tabs__tab--active"
+                        data-tab="1"
+                    >
+                        Due for Review
+                    </button>
+                    <button class="tabs__tab tabs__tab--2" data-tab="2">
+                        All Problems
+                    </button>
+                </div>
+
+                <div class="tabs__content tabs__content--1 tabs__tab--active">
+                    <h3 class="tabs__header">Problems to Review Today</h3>
+                    <ul class="problem-list list--due">
+                        <p class="empty-message">All caught up! 🎉</p>
+                    </ul>
+                </div>
+
+                <div class="tabs__content tabs__content--2">
+                    <h3 class="tabs__header">Full Schedule</h3>
+                    <ul class="problem-list list--all">
+                        <p class="empty-message">
+                            No problems added yet. Add one above to get started!
+                        </p>
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <script defer src="script.js"></script>
+    </body>
+</html>
